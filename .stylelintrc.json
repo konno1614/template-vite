@@ -1,0 +1,15 @@
+{
+    "extends": [
+        "stylelint-config-standard-scss",
+        "stylelint-config-standard-vue/scss"
+    ],
+    "overrides": [
+        {
+        "files": [
+            "src/**/*.tsx",
+            "src/**/*.ts"
+        ],
+        "customSyntax": "@stylelint/postcss-css-in-js"
+        }
+    ]
+}

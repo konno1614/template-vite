@@ -41,6 +41,14 @@ console.log(inputObject)
 
 export default defineConfig({
     root: "src",
+    base: "./",
+    css: {
+        preprocessorOptions: {
+            scss: {
+                api: 'modern-compiler', // or "modern", "legacy"
+            }
+        },
+    },
     build: {
         outDir: resolve(__dirname, "dist"),
         emptyOutDir: true,
@@ -48,7 +56,7 @@ export default defineConfig({
             input: inputObject,
             output: {
                 entryFileNames: `[name].js`,
-                chunkFileNames: `[name].js`,
+                chunkFileNames: `assets/js/[name].js`,
                 assetFileNames: (assetInfo) => {
                 if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
                     return 'assets/img/[name].[ext]';
@@ -57,7 +65,7 @@ export default defineConfig({
                     return 'assets/css/[name].[ext]';
                 }
                     return 'assets/[name].[ext]';
-                }
+                },
             },
         }
     },
