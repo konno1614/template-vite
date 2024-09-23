@@ -6,7 +6,7 @@ import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 
 const jsFiles = Object.fromEntries(
-    globSync('src/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/dist/**']}).map(file => [
+    globSync('src/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
         path.relative(
             'src',
             file.slice(0, file.length - path.extname(file).length)
@@ -26,7 +26,7 @@ const scssFiles = Object.fromEntries(
 );
 
 const htmlFiles = Object.fromEntries(
-    globSync('src/**/*.html', { ignore: ['node_modules/**', '**/dist/**'] }).map(file => [
+    globSync('src/**/*.html', { ignore: ['node_modules/**', '**/public/**'] }).map(file => [
         path.relative(
             'src',
             file.slice(0, file.length - path.extname(file).length)
@@ -50,7 +50,7 @@ export default defineConfig({
         },
     },
     build: {
-        outDir: resolve(__dirname, "dist"),
+        outDir: resolve(__dirname, "public"),
         emptyOutDir: true,
         rollupOptions: {
             input: inputObject,
