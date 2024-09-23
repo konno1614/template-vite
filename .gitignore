@@ -12,6 +12,7 @@ dist
 dist-ssr
 public
 public-ssr
+!/src/public
 *.local
 
 # Editor directories and files
