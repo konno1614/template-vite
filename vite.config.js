@@ -4,6 +4,7 @@ import { fileURLToPath } from 'node:url';
 import { defineConfig } from "vite";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
+import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
 
 const jsFiles = Object.fromEntries(
     globSync('src/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
@@ -71,7 +72,13 @@ export default defineConfig({
     },
     plugins: [
         ViteEjsPlugin(),
-        sassGlobImports()
+        sassGlobImports(),
+        VitePluginWebpAndPath({
+            targetDir: './public/',  // デフォルトは './dist/'
+            imgExtensions: 'jpg,png',  // デフォルトは 'jpg,png'
+            textExtensions: 'html,css',  // デフォルトは 'html,css'
+            quality: 80,  // デフォルトは 80
+        }),
     ],
     server: {
         port: 3000

@@ -21,7 +21,8 @@
         "vite-plugin-sass-glob-import": "^3.0.2"
     },
     "dependencies": {
-        "glob": "^11.0.0"
+        "glob": "^11.0.0",
+        "vite-plugin-webp-and-path": "^0.1.4"
     },
     "browserslist": [
         "last 2 version",
