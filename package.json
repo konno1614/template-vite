@@ -16,11 +16,7 @@
         "postcss-sort-media-queries": "^5.2.0",
         "postcss-syntax": "^0.36.2",
         "sass": "^1.77.8",
-        "stylelint": "^16.9.0",
-        "stylelint-config-standard-scss": "^13.1.0",
-        "stylelint-config-standard-vue": "^1.0.0",
         "vite": "^5.4.0",
-        "vite-plugin-checker": "^0.8.0",
         "vite-plugin-ejs": "^1.7.0",
         "vite-plugin-sass-glob-import": "^3.0.2"
     },
