@@ -74,10 +74,10 @@ export default defineConfig({
         ViteEjsPlugin(),
         sassGlobImports(),
         VitePluginWebpAndPath({
-            targetDir: './public/',  // デフォルトは './dist/'
-            imgExtensions: 'jpg,png',  // デフォルトは 'jpg,png'
-            textExtensions: 'html,css',  // デフォルトは 'html,css'
-            quality: 80,  // デフォルトは 80
+            targetDir: './public/',
+            imgExtensions: 'jpg,png',
+            textExtensions: 'html,css',
+            quality: 80,
         }),
     ],
     server: {
