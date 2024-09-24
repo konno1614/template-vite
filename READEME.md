@@ -44,7 +44,7 @@ ncu -u
 ```
 コマンドを実行 (`package.json`のバージョンが更新される)
 ```
-rm -rm node_modules
+rm -rf node_modules
 ```
 node_modulesを削除
 ```
