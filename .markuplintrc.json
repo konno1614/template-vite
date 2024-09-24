@@ -1,0 +1,26 @@
+{
+    "extends": [
+    "markuplint:recommended"
+    ],
+    "parser": {
+        ".mustache$|.hbs$": "@markuplint/mustache-parser",
+        ".ejs$": "@markuplint/ejs-parser"
+    },
+    "rules": {
+        "character-reference": false,
+        "permitted-contents": false,
+        "required-h1": false
+    },
+    "nodeRules": [
+        {
+        "selector": "head",
+        "rules": {
+            "required-element": {
+            "options": {
+                "ignoreHasMutableContents": true
+            }
+            }
+        }
+        }
+    ]
+}

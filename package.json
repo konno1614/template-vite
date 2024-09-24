@@ -7,11 +7,15 @@
     "scripts": {
         "start": "vite",
         "build": "vite build",
-        "preview": "vite preview"
+        "preview": "vite preview",
+        "lint:html": "markuplint src/**/*.{html,ejs}"
     },
     "devDependencies": {
+        "@markuplint/ejs-parser": "^4.6.7",
+        "@markuplint/mustache-parser": "^4.6.7",
         "autoprefixer": "^10.4.20",
         "css-declaration-sorter": "^7.2.0",
+        "markuplint": "^4.9.4",
         "postcss-html": "^1.7.0",
         "postcss-sort-media-queries": "^5.2.0",
         "postcss-syntax": "^0.36.2",
