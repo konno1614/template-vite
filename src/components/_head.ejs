@@ -3,5 +3,12 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Title</title>
+    <% if(pageId === 'index') { %>
+    <script type="module" src="/assets/js/index.js"></script>
+    <% } else if(pageId === 'about') { %>
+    <script type="module" src="/assets/js/about.js"></script>
+    <% } else { %>
+
+    <% } %>
     <link rel="stylesheet" href="/assets/styles/style.scss">
 </head>
