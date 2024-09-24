@@ -4,14 +4,16 @@
     <%- include('./components/_head.ejs',{pageId: pageId}) %>
     <body class="p-index">
         <%- include('./components/_header.ejs') %>
-
-        <h1>index</h1>
-        <p>インデックスページ</p>
-        <p><%= pageId %></p>
-        <img src="/assets/img/index.jpg" class="" width="" height="" alt="" />
-        <img src="/assets/img/index.png" class="" width="" height="" alt="" />
-        <a href="./about/" class="button">aboutページ</a>
-
+        <main class="l-main">
+            <div class="l-inner">
+                <h1>index</h1>
+                <p>インデックスページ</p>
+                <p><%= pageId %></p>
+                <img src="/assets/img/index-jpg.jpg" class="" width="" height="" alt="" />
+                <img src="/assets/img/index-png.png" class="" width="" height="" alt="" />
+                <a href="./about/" class="button">aboutページ</a>
+            </div>
+        </main>
         <%- include('./components/_footer.ejs') %>
     </body>
 </html>

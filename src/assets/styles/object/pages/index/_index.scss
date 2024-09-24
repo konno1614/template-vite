@@ -1,10 +1,15 @@
+@use "../../../foundation/index" as f;
+
 .p-index {
     h1 {
-        font-size: 3.0rem;
+        font-size: 3rem;
     }
 
     p {
-        color: red;
+        color: f.$c-red;
+        @include f.breakpoint(sp) {
+            color: f.$c-blue;
+        }
     }
 
     .button {
