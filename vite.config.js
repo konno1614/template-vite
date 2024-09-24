@@ -5,6 +5,8 @@ import { defineConfig } from "vite";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
+import { networkInterfaces } from 'os'
+import VitePluginBrowserSync from 'vite-plugin-browser-sync'
 
 const jsFiles = Object.fromEntries(
     globSync('src/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
@@ -38,7 +40,7 @@ const htmlFiles = Object.fromEntries(
 
 const inputObject = { ...scssFiles, ...jsFiles, ...htmlFiles };
 
-console.log(inputObject)
+console.log(inputObject);
 
 export default defineConfig({
     root: "src",
@@ -79,8 +81,10 @@ export default defineConfig({
             textExtensions: 'html,css',
             quality: 80,
         }),
+        VitePluginBrowserSync()
     ],
     server: {
-        port: 3000
+        port: 3000,
+        host: true
     }
 })
