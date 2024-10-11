@@ -53,6 +53,7 @@ export default defineConfig({
     build: {
         outDir: resolve(__dirname, "public"),
         emptyOutDir: true,
+        sourcemap: false,
         rollupOptions: {
             input: inputObject,
             output: {

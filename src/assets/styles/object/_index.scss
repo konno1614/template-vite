@@ -1,10 +1,9 @@
+@use "./component/nav";
+@use "./component/hamburger";
 @use "./component/button";
 @use "./component/title";
 
-@use "./pages/index/index" as indexPage; // 名前空間を指定
-@use "./pages/about/index" as aboutPage; // 名前空間を指定
-
-@use "./project/nav";
-@use "./project/hamburger";
+@use "./pages/index/index" as indexPage;
+@use "./pages/about/index" as aboutPage;
 
 @use "./utility/display";

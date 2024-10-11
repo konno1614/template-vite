@@ -2,9 +2,26 @@
 <html lang="ja">
     <head>
         <meta charset="UTF-8" />
-        <link rel="icon" type="image/svg+xml" href="/vite.svg" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Title</title>
+        <title>Sample Sites</title>
+        <meta name="description" content="Description Text Description Text Description Text Description Text" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- icon -->
+        <link rel="icon" href="/assets/img/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon" />
+        <link rel="icon" href="/assets/img/favicon.svg" type="image/svg+xml" />
+        <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.webp" />
+        <link rel="manifest" href="/manifest.webmanifest" crossorigin="use-credentials" />
+        <!-- ogp -->
+        <meta property="og:site_name" content="Sample Sites" />
+        <meta property="og:url" content="https://www.google.com" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Sample Sites" />
+        <meta property="og:description" content="Description Text Description Text Description Text Description Text" />
+        <meta property="og:image" content="/assets/img/ogp.webp" />
+        <meta property="og:locale" content="ja_JP" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:description" content="Description Text Description Text Description Text Description Text" />
+        <meta name="twitter:image:src" content="https://www.google.com" />
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,17 +29,24 @@
         <!-- Files -->
 
         <script type="module" crossorigin src="../assets/js/style.js"></script>
+        <script type="module" crossorigin src="../assets/js/common.js"></script>
         <script type="module" crossorigin src="../assets/js/about.js"></script>
         <link rel="stylesheet" crossorigin href="../assets/css/style.css" />
     </head>
 
-    <body class="p-about">
-        <header>header</header>
+    <body>
+        <header class="l-header">
+            <h1>header</h1>
+        </header>
 
-        <h1>about</h1>
-        <img src="../assets/img/about/about.webp" class="" width="" height="" alt="" />
-        <a href="/" class="button">indexページ</a>
+        <main class="l-main p-about">
+            <img src="../assets/img/about/about.webp" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+            <h2>about</h2>
+            <a href="/">indexページ</a>
+        </main>
 
-        <footer>footer</footer>
+        <footer class="l-footer">
+            <p>footer</p>
+        </footer>
     </body>
 </html>

@@ -1,1 +1,1 @@
-console.log("about.js");
+document.addEventListener("DOMContentLoaded",function(){console.log("about.js")});
