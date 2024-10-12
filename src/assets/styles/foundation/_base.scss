@@ -4,6 +4,6 @@
 body {
     @include f.gothic();
     @include b.breakpoint(sp) {
-        @include f.serif();
+        // @include f.serif();
     }
 }

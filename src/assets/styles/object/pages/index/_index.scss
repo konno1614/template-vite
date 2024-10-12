@@ -1,16 +1,25 @@
 @use "../../../foundation/index" as f;
 
 .p-index {
+    padding: 50px 0;
     &__title {
-        font-size: 3rem;
+        font-size: f.clamp-vw(20, 40, 320, 1440);
+        line-height: calc(60 / 40);
+        letter-spacing: calc(75em / 1000);
+        margin-block-start: calc(40px + var(--leading-trim));
+        padding-block: calc(50px + var(--leading-trim));
+        padding: 0 20px;
         @include f.breakpoint(sp) {
-            font-size: 2rem;
         }
+    }
+    &__text {
+        margin-top: 50px;
     }
     &__jpg {
         margin-top: 50px;
         h3 {
             color: f.$c-blue;
+            margin-bottom: 20px;
             @include f.breakpoint(sp) {
                 color: f.$c-red;
             }
@@ -22,6 +31,7 @@
         margin-top: 50px;
         h3 {
             color: f.$c-red;
+            margin-bottom: 20px;
             @include f.breakpoint(sp) {
                 color: f.$c-blue;
             }
