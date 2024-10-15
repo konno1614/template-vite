@@ -18,56 +18,52 @@
     │   │   └── index.html
     │   ├── assets/
     │   │   ├── styles/
+    │   │   │   │──style.scss
     │   │   │   ├── foundation/
-    │   │   │   │   ├── hoge.scss
-    │   │   │   │   └── etc…
+    │   │   │   │   ├── _index.scss
+    │   │   │   │   └── _*.scss
     │   │   │   ├── layout/
-    │   │   │   │   ├── hoge.scss
-    │   │   │   │   └── etc…
+    │   │   │   │   ├── _index.scss
+    │   │   │   │   └── _*.scss
     │   │   │   └── object/
+    │   │   │       ├── _index.scss
     │   │   │       ├── component/
-    │   │   │       │   ├── hoge.scss
-    │   │   │       │   └── etc…
+    │   │   │       │   └── _*.scss
     │   │   │       ├── pages/
-    │   │   │       │   ├── hoge.scss
-    │   │   │       │   └── etc…
+    │   │   │       │   └── _*.scss
     │   │   │       └── utility/
-    │   │   │           ├── hoge.scss
-    │   │   │           └── etc…
+    │   │   │           └── _*.scss
     │   │   └── js/
-    │   │       ├── hoge.js
-    │   │       └── etc…
+    │   │       └── *.js
     │   ├── components/
-    │   │   ├── hoge.ejs
-    │   │   └── etc…
+    │   │   └── _*.ejs
     │   └── public/
     │       └── assets/
-    │           ├── img/
-    │           │   ├── hoge.png
-    │           │   ├── hoge.jpg
-    │           │   ├── hoge.svg
+    │           ├── img/  // png,jpg画像はwebpにbuild時に変換されます
+    │           │   ├── hoge1.png
+    │           │   ├── hoge2.jpg
+    │           │   ├── hoge3.svg
     │           │   └── etc…
-    │           ├── css/
-    │           │   ├── hoge.css
-    │           │   └── etc…
-    │           └── js/
-    │               ├── hoge.js
-    │               └── etc…
+    │           ├── css/  // 圧縮したくないstyles（※1）
+    │           │   └── hoge.css
+    │           └── js/  // 圧縮したくないscripts（※2）
+    │               └── hoge.js
     └── public/
-        ├── index.html
+        ├── index.html  // *.png、*.jpgの記述は*.webpに変換
         ├── assets/
         │   ├── css/
+        │   │   ├── hoge.css  // 圧縮したくないstyles（※1）
         │   │   └── style.css
-        │   ├── img/
-        │   │   ├── hoge.png
-        │   │   ├── hoge.jpg
-        │   │   ├── hoge.svg
+        │   ├── img/  // *.png,*.jpgは*.webpに変換
+        │   │   ├── hoge1.webp
+        │   │   ├── hoge2.webp
+        │   │   ├── hoge3.svg
         │   │   └── etc…
         │   └── js/
-        │       ├── hoge.js
-        │       └── etc…
+        │       ├── hoge.js  // 圧縮したくないscripts（※2）
+        │       └── *.js
         └── hoge/
-            └── inde.html
+            └── index.html
 ```
 
 ### 推奨 node バーション
