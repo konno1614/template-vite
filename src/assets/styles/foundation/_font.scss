@@ -1,4 +1,5 @@
 @use "./breakpoint" as b;
+@use "./color" as c;
 
 // font-family
 @mixin gothic {
@@ -60,8 +61,11 @@
 body {
     @include gothic;
     font-size: 16px;
+    font-weight: 400;
+    font-style: normal;
     line-height: 1.5;
     letter-spacing: 0.05em;
+    color: c.$c-text;
     word-wrap: break-word;
     text-size-adjust: 100%;
     font-feature-settings: "palt";

@@ -7,7 +7,7 @@ import { ViteEjsPlugin } from "vite-plugin-ejs";
 import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
 
 const jsFiles = Object.fromEntries(
-    globSync('src/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
+    globSync('src/assets/js/pages/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
         path.relative(
             'src',
             file.slice(0, file.length - path.extname(file).length)
@@ -57,7 +57,7 @@ export default defineConfig({
         rollupOptions: {
             input: inputObject,
             output: {
-                entryFileNames: `[name].js`,
+                entryFileNames: `assets/js/[name].js`,
                 chunkFileNames: `assets/js/[name].js`,
                 assetFileNames: (assetInfo) => {
                     if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {

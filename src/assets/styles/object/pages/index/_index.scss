@@ -1,25 +1,39 @@
 @use "../../../foundation/index" as f;
 
 .p-index {
-    padding: 50px 0;
+    padding-top: f.clamp-space(50, 100, 320, 1440);
+    padding-bottom: f.clamp-space(50, 100, 320, 1440);
+    @include f.breakpoint(sp) {
+        padding-top: f.clamp-space(30, 50, 320, 1440);
+        padding-bottom: f.clamp-space(30, 50, 320, 1440);
+    }
     &__title {
         font-size: f.clamp-vw(20, 40, 320, 1440);
         line-height: calc(60 / 40);
         letter-spacing: calc(75em / 1000);
-        margin-block-start: calc(40px + var(--leading-trim));
-        padding-block: calc(50px + var(--leading-trim));
-        padding: 0 20px;
-        @include f.breakpoint(sp) {
-        }
+        margin-block-start: calc(10px + var(--leading-trim));
     }
     &__text {
-        margin-top: 50px;
+        background-color: f.$c-accent;
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        margin-bottom: f.clamp-space(30, 50, 320, 1440);
+        padding-top: f.clamp-space(10, 20, 320, 1440);
+        padding-bottom: f.clamp-space(10, 20, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+            margin-bottom: f.clamp-space(30, 30, 320, 1440);
+            padding-top: f.clamp-space(10, 10, 320, 1440);
+            padding-bottom: f.clamp-space(10, 10, 320, 1440);
+        }
     }
     &__jpg {
-        margin-top: 50px;
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+        }
         h3 {
             color: f.$c-blue;
-            margin-bottom: 20px;
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
             @include f.breakpoint(sp) {
                 color: f.$c-red;
             }
@@ -28,24 +42,30 @@
         }
     }
     &__png {
-        margin-top: 50px;
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+        }
         h3 {
             color: f.$c-red;
-            margin-bottom: 20px;
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
             @include f.breakpoint(sp) {
                 color: f.$c-blue;
             }
         }
     }
     &__link {
-        margin-top: 50px;
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+        }
         a {
             &::before {
                 content: "";
                 display: inline-block;
-                margin-right: 0.5rem;
-                width: 1rem;
-                height: 1rem;
+                margin-right: f.clamp-space(20, 20, 320, 1440);
+                width: 20px;
+                height: 20px;
                 background-image: url(/assets/img/vite.svg);
                 background-repeat: no-repeat;
                 background-size: contain;
