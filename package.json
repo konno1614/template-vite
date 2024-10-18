@@ -35,6 +35,7 @@
     },
     "dependencies": {
         "glob": "^11.0.0",
+        "gsap": "^3.12.5",
         "vite-plugin-webp-and-path": "^0.1.4"
     },
     "browserslist": [

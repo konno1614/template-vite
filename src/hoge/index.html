@@ -1,0 +1,19 @@
+<% const pageId = 'hoge'; %>
+<!doctype html>
+<html lang="ja">
+    <%- include('./components/_head.ejs',{pageId: pageId}) %>
+    <body>
+        <%- include('./components/_header.ejs') %>
+
+        <main class="l-main p-hoge">
+            <img src="/assets/img/hoge/hoge.jpg" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+            <h2>hoge</h2>
+            <p class="p-index__text">
+                <span style="display: block;" class="js-text">text text text</span>
+            </p>
+            <a href="../index.html">indexページ</a>
+        </main>
+
+        <%- include('./components/_footer.ejs') %>
+    </body>
+</html>
