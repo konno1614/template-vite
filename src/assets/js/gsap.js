@@ -4,7 +4,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 document.addEventListener("DOMContentLoaded", function () {
     gsap.to('.js-text', {
-        xPercent: 100,
+        xPercent: 50,
         duration: 5,
         repeat: -1,
         ease: 'none',
