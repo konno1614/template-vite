@@ -16,6 +16,10 @@
     │   ├── index.html
     │   ├── hoge/
     │   │   └── index.html
+    │   ├── */
+    │   │   └── index.html
+    │   │   └── */
+    │   │       └── index.html
     │   ├── assets/
     │   │   ├── styles/
     │   │   │   │──style.scss
