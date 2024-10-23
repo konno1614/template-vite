@@ -1,4 +1,4 @@
-<%- include('_const.ejs'); %>
+<%- include('./_meta.ejs'); %>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -29,8 +29,10 @@
     <script type="module" src="/assets/js/common.js"></script>
     <% if(pageId === 'index') { %>
     <script type="module" src="/assets/js/index.js"></script>
-    <% } else if(pageId === 'about') { %>
-    <script type="module" src="/assets/js/about.js"></script>
+    <% } else if(pageId === 'hoge') { %>
+    <script type="module" src="/assets/js/hoge.js"></script>
+    <% } else if(pageId === 'news') { %>
+    <script type="module" src="/assets/js/news.js"></script>
     <% } else { %>
     <% } %>
     <link rel="stylesheet" href="/assets/styles/style.scss">

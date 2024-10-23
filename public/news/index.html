@@ -28,20 +28,61 @@
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet" />
         <!-- Files -->
 
-        <script type="module" crossorigin src="../assets/js/about/index.js"></script>
+        <script type="module" crossorigin src="../assets/js/news/index.js"></script>
         <link rel="modulepreload" crossorigin href="../assets/js/style.js" />
         <link rel="stylesheet" crossorigin href="../assets/css/style.css" />
     </head>
 
     <body>
         <header class="l-header">
-            <h1>header</h1>
+            <h1>
+                <a href="/">header</a>
+            </h1>
+            <ul>
+                <li>
+                    <a href="/hoge/">hoge</a>
+                </li>
+                <li>
+                    <a href="/news/">news</a>
+                </li>
+                <li>
+                    <a href="/news/news-single/">news-single</a>
+                </li>
+            </ul>
         </header>
+        <div class="c-hamburger js-hamburger">
+            <div class="c-hamburger__border">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <p class="c-hamburger__menu">menu</p>
+        </div>
 
-        <main class="l-main p-about">
-            <img src="../assets/img/about/about.webp" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
-            <h2>about</h2>
-            <a href="/">indexページ</a>
+        <nav class="c-sp-nav">
+            <ul class="c-sp-nav__list">
+                <li>
+                    <a href="#">Nav01</a>
+                </li>
+                <li>
+                    <a href="#">Nav02</a>
+                </li>
+                <li>
+                    <a href="#">Nav03</a>
+                </li>
+                <li>
+                    <a href="#">Nav04</a>
+                </li>
+                <li>
+                    <a href="#">Nav05</a>
+                </li>
+            </ul>
+        </nav>
+
+        <main class="l-main p-news">
+            <div class="l-inner">
+                <h2>News</h2>
+            </div>
         </main>
 
         <footer class="l-footer">

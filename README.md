@@ -45,14 +45,14 @@
     │           │   ├── hoge3.svg
     │           │   └── etc…
     │           ├── css/  // 圧縮したくないstyles（※1）
-    │           │   └── hoge.css
+    │           │   └── not-compressed.css
     │           └── js/  // 圧縮したくないscripts（※2）
-    │               └── hoge.js
+    │               └── not-compressed.js
     └── public/
         ├── index.html  // *.png、*.jpgの記述は*.webpに変換
         ├── assets/
         │   ├── css/
-        │   │   ├── hoge.css  // 圧縮したくないstyles（※1）
+        │   │   ├── not-compressed.css  // 圧縮したくないstyles（※1）
         │   │   └── style.css
         │   ├── img/  // *.png,*.jpgは*.webpに変換
         │   │   ├── hoge1.webp
@@ -60,7 +60,7 @@
         │   │   ├── hoge3.svg
         │   │   └── etc…
         │   └── js/
-        │       ├── hoge.js  // 圧縮したくないscripts（※2）
+        │       ├── not-compressed.js  // 圧縮したくないscripts（※2）
         │       └── *.js
         └── hoge/
             └── index.html
