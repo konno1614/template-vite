@@ -1,9 +1,10 @@
-<% const pageId = 'news-single'; %>
+<%_ const path = './../..'; _%>
+<% const page_id = { id: 'news-single'} %>
 <!doctype html>
 <html lang="ja">
-    <%- include('./components/_head.ejs',{pageId: pageId}) %>
+    <%- include('./components/_head.ejs',{path: path, page: page_id}) %>
     <body>
-        <%- include('./components/_header.ejs') %>
+        <%- include('./components/_header.ejs',{path: path, page: page_id}) %>
 
         <main class="l-main p-news-single">
             <div class="l-inner">
@@ -11,6 +12,6 @@
             </div>
         </main>
 
-        <%- include('./components/_footer.ejs') %>
+        <%- include('./components/_footer.ejs',{path: path, page: page_id}) %>
     </body>
 </html>

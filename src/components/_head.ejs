@@ -27,11 +27,11 @@
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
     <!-- Files -->
     <script type="module" src="/assets/js/common.js"></script>
-    <% if(pageId === 'index') { %>
+    <% if(page.id === 'index') { %>
     <script type="module" src="/assets/js/index.js"></script>
-    <% } else if(pageId === 'hoge') { %>
+    <% } else if(page.id === 'hoge') { %>
     <script type="module" src="/assets/js/hoge.js"></script>
-    <% } else if(pageId === 'news') { %>
+    <% } else if(page.id === 'news') { %>
     <script type="module" src="/assets/js/news.js"></script>
     <% } else { %>
     <% } %>
