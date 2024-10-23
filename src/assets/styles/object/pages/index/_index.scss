@@ -1,6 +1,7 @@
 @use "../../../foundation/index" as f;
 
 .p-index {
+    overflow-x: hidden;
     padding-top: f.clamp-space(50, 100, 320, 1440);
     padding-bottom: f.clamp-space(50, 100, 320, 1440);
     @include f.breakpoint(sp) {
@@ -54,4 +55,27 @@
             }
         }
     }
+<<<<<<< HEAD
+=======
+    &__link {
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+        }
+        a {
+            display: flex;
+            align-items: center;
+            &::before {
+                content: "";
+                display: inline-block;
+                margin-right: f.clamp-space(16, 16, 320, 1440);
+                width: 16px;
+                height: 16px;
+                background-image: url(/assets/img/vite.svg);
+                background-repeat: no-repeat;
+                background-size: contain;
+            }
+        }
+    }
+>>>>>>> 0c4a7b0ebbc012dd29bb7d819b488bc7c2ed5b86
 }

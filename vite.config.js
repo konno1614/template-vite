@@ -1,10 +1,10 @@
-import { globSync } from "glob";
-import path, { resolve } from 'node:path';
-import { fileURLToPath } from 'node:url';
 import { defineConfig } from "vite";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
+import { globSync } from "glob";
+import path, { resolve } from 'node:path';
+import { fileURLToPath } from 'node:url';
 
 const jsFiles = Object.fromEntries(
     globSync('src/assets/js/pages/**/*.js', { ignore: ['node_modules/**','**/modules/**','**/public/**']}).map(file => [
