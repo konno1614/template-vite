@@ -1,31 +1,34 @@
 <%
+    <!-- Sample Code -->
     site = {
-        <!-- Basic meta -->
         url: 'https://example.com',
-        title: 'Sample Sites',
-        description: 'Description Text',
+        title: 'Title Sample',
+        description: 'Description Text'
     };
 %>
 
 <% if(page.id == 'index') { %>
     <%
         site = {
+            url: 'https://example.com',
             title: 'Top | Sample Sites',
+            description: 'Description Text'
         };
     %>
 <% } else if (page.id == 'hoge') { %>
     <%
         site = {
+            url: 'https://example.com/hoge/',
             title: 'Hoge | Sample Sites',
+            description: 'Description Text'
         };
     %>
 <% } else if (page.id == 'news') { %>
     <%
         site = {
+            url: 'https://example.com/news/',
             title: 'News | Sample Sites',
-            description: 'News Page Description Text',
+            description: 'Description Text'
         };
     %>
-<% } else { %>
-
 <% } %>
