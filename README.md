@@ -1,4 +1,5 @@
 # template-vite
+利用OSはMacを想定しています。
 
 ## フロント開発
 ![VS Code](https://img.shields.io/badge/Visual%20Studio%20Code-007ACC?style=flat&logo=visualstudiocode&logoColor=ffffff)
@@ -95,22 +96,27 @@ npm run build
 ```
 
 ### npmパッケージアップデート
+
 ```
 npm i -g npm-check-updates
 ```
 ▲グローバルに`npm-check-updates`のインストール
+
 ```
 ncu
 ```
 ▲アップデートできるライブラリとアップデートされるバージョンの一覧を確認
+
 ```
 ncu -u
 ```
 ▲コマンドを実行 (`package.json`のバージョンが更新される)
+
 ```
 rm -rf node_modules
 ```
 ▲node_modulesを削除
+
 ```
 npm install
 ```
