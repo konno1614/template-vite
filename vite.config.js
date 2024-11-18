@@ -79,6 +79,7 @@ export default defineConfig({
             imgExtensions: 'jpg,png',
             textExtensions: 'html,css',
             quality: 80,
+            enableLogs: true
         })
     ],
     server: {
