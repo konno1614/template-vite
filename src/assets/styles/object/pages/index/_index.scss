@@ -19,7 +19,9 @@
         margin-top: f.clamp-space(30, 50, 320, 1440);
         margin-bottom: f.clamp-space(30, 50, 320, 1440);
         padding-top: f.clamp-space(10, 20, 320, 1440);
+        padding-right: f.clamp-space(10, 20, 320, 1440);
         padding-bottom: f.clamp-space(10, 20, 320, 1440);
+        padding-left: f.clamp-space(10, 20, 320, 1440);
         @include f.breakpoint(sp) {
             margin-top: f.clamp-space(30, 30, 320, 1440);
             margin-bottom: f.clamp-space(30, 30, 320, 1440);
