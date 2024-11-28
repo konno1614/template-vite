@@ -5,7 +5,7 @@
     "version": "0.0.0",
     "type": "module",
     "scripts": {
-        "start": "node ./image-format-converter-src.js && vite",
+        "start": "node remove-src-images.js && node ./image-format-converter-src.js && vite",
         "build": "vite build && prettier --write 'public/**/*.html' && node ./image-format-converter.js && node remove-src-images.js",
         "image-format-converter": "node ./image-format-converter.js",
         "image-format-converter-src": "node ./image-format-converter-src.js",
