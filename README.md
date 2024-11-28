@@ -9,7 +9,6 @@
 ![node.js](https://img.shields.io/badge/Node.js-5FA04E?style=flat&logo=node.js&logoColor=ffffff)
 ![npm](https://img.shields.io/badge/npm-CB3837?style=flat&logo=npm&logoColor=ffffff)
 
-
 ### ファイル構成
 ```txt
 └── Project/
@@ -44,7 +43,7 @@
     │   │   └── _*.ejs
     │   └── public/
     │       └── assets/
-    │           ├── img/  // png,jpg画像はwebpにbuild時に変換されます
+    │           ├── img/  // png,jpg画像はwebp,avifにbuild時に変換されます
     │           │   ├── hoge1.png
     │           │   ├── hoge2.jpg
     │           │   ├── hoge3.svg
@@ -54,7 +53,7 @@
     │           └── js/  // 圧縮したくないscripts（※2）
     │               └── not-compressed.js
     └── public/
-        ├── index.html  // *.png、*.jpgの記述は*.webpに変換
+        ├── index.html  // *.png、*.jpgの記述は*.webp,*.avifに変換
         ├── assets/
         │   ├── css/
         │   │   ├── not-compressed.css  // 圧縮したくないstyles（※1）
@@ -72,31 +71,26 @@
 ```
 
 ### 推奨 node バーション
-
 ```
 node.js(version: v22.9.0)
 ```
 
 ### 依存ファイルインストール
-
 ```
 npm install
 ```
 
 ### 開発開始
-
 ```
 npm run start
 ```
 
 ### 開発終了
-
 ```
 npm run build
 ```
 
 ### npmパッケージアップデート
-
 ```
 npm i -g npm-check-updates
 ```
@@ -123,7 +117,21 @@ npm install
 ```
 ▲更新された`package.json`に合わせた新しいバージョンがインストールされる
 
+## 記述例
+
+### 画像
+```
+<picture>
+    <source srcset="<%= path %>/assets/img/index/main-image.avif" width="300" height="200" alt="image" fetchpriority="high" type="image/avif">
+    <source srcset="<%= path %>/assets/img/index/main-image.webp" width="300" height="220" alt="image" fetchpriority="high" type="image/webp">
+    <img src="/assets/img/index/main-image.jpg" width="300" height="255" alt="image" fetchpriority="high" />
+</picture>
+
+<picture>
+    <source srcset="<%= path %>/assets/img/index/jpg-image.avif" width="300" height="255" alt="image" loading="lazy" decoding="async" type="image/avif" >
+    <img src="/assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" loading="lazy" decoding="async" />
+</picture>
+```
 
 ## GitHub Pages
-
 [publicディレクトリ](https://konno1614.github.io/template-vite/public/)

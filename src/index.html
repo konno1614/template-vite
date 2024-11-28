@@ -13,20 +13,29 @@
                 <p class="p-index__text">
                     <span style="display: block;" class="js-text">text text text</span>
                 </p>
+                <div class="p-index__image">
+                    <h3>main image</h3>
+                    <p>avif,webp対応</p>
+                    <picture>
+                        <source srcset="<%= path %>/assets/img/index/main-image.avif" width="300" height="200" alt="image" fetchpriority="high" type="image/avif">
+                        <source srcset="<%= path %>/assets/img/index/main-image.webp" width="300" height="220" alt="image" fetchpriority="high" type="image/webp">
+                        <img src="/assets/img/index/main-image.jpg" width="300" height="255" alt="image" fetchpriority="high" />
+                    </picture>
+                </div>
                 <div class="p-index__jpg">
                     <h3>jpg image</h3>
                     <p>avif対応</p>
                     <picture>
-                        <source srcset="<%= path %>/assets/img/index/jpg-image.avif" type="image/avif" width="300" height="255" alt="image">
-                        <img src="/assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                        <source srcset="<%= path %>/assets/img/index/jpg-image.avif" width="300" height="255" alt="image" loading="lazy" decoding="async" type="image/avif" >
+                        <img src="/assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" loading="lazy" decoding="async" />
                     </picture>
                 </div>
                 <div class="p-index__png">
                     <h3>png image</h3>
                     <p>webp対応</p>
                     <picture>
-                        <source srcset="<%= path %>/assets/img/index/png-image.webp" type="image/webp" width="300" height="255" alt="image">
-                        <img src="/assets/img/index/png-image.png" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                        <source srcset="<%= path %>/assets/img/index/png-image.webp" width="300" height="255" alt="image" loading="lazy" decoding="async" type="image/webp">
+                        <img src="/assets/img/index/png-image.png" width="300" height="255" alt="image" loading="lazy" decoding="async" />
                     </picture>
                 </div>
             </div>

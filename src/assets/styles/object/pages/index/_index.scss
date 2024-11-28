@@ -29,6 +29,21 @@
             padding-bottom: f.clamp-space(10, 10, 320, 1440);
         }
     }
+    &__image {
+        margin-top: f.clamp-space(30, 50, 320, 1440);
+        @include f.breakpoint(sp) {
+            margin-top: f.clamp-space(30, 30, 320, 1440);
+        }
+        h3 {
+            color: f.$c-red;
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
+            @include f.breakpoint(sp) {
+            }
+        }
+        p {
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
+        }
+    }
     &__jpg {
         margin-top: f.clamp-space(30, 50, 320, 1440);
         @include f.breakpoint(sp) {
@@ -38,10 +53,10 @@
             color: f.$c-blue;
             margin-bottom: f.clamp-space(15, 20, 320, 1440);
             @include f.breakpoint(sp) {
-                color: f.$c-red;
             }
         }
-        img {
+        p {
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
         }
     }
     &__png {
@@ -53,8 +68,10 @@
             color: f.$c-red;
             margin-bottom: f.clamp-space(15, 20, 320, 1440);
             @include f.breakpoint(sp) {
-                color: f.$c-blue;
             }
+        }
+        p {
+            margin-bottom: f.clamp-space(15, 20, 320, 1440);
         }
     }
 }
