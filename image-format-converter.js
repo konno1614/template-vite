@@ -13,7 +13,7 @@ class ImageFormatConverter {
         includeExtensionName: true, // Include extension name in the output file
         formats: [
             { type: 'webp', quality: 80 },
-            // { type: 'avif', quality: 50 }
+            { type: 'avif', quality: 50 }
         ]
     }
 

@@ -15,11 +15,19 @@
                 </p>
                 <div class="p-index__jpg">
                     <h3>jpg image</h3>
-                    <img src="/assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+                    <p>avif対応</p>
+                    <picture>
+                        <source srcset="<%= path %>/assets/img/index/jpg-image.avif" type="image/avif" width="300" height="255" alt="image">
+                        <img src="/assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                    </picture>
                 </div>
                 <div class="p-index__png">
                     <h3>png image</h3>
-                    <img src="/assets/img/index/png-image.png" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+                    <p>webp対応</p>
+                    <picture>
+                        <source srcset="<%= path %>/assets/img/index/png-image.webp" type="image/webp" width="300" height="255" alt="image">
+                        <img src="/assets/img/index/png-image.png" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                    </picture>
                 </div>
             </div>
         </main>
