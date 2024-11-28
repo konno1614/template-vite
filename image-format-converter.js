@@ -10,7 +10,7 @@ class ImageFormatConverter {
         srcDir: 'src/public/assets/img',
         distDir: 'public/assets/img',
         src: ['src/public/assets/img/**/*.{jpg,jpeg,png}'],
-        includeExtensionName: true,
+        includeExtensionName: true, // Include extension name in the output file
         formats: [
             { type: 'webp', quality: 80 },
             // { type: 'avif', quality: 50 }

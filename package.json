@@ -6,7 +6,7 @@
     "type": "module",
     "scripts": {
         "start": "vite",
-        "build": "vite build && prettier --write 'public/**/*.html'",
+        "build": "vite build && prettier --write 'public/**/*.html' && node ./image-format-converter.js",
         "image-format-converter": "node ./image-format-converter.js",
         "preview": "vite preview",
         "format:html": "prettier --write 'public/**/*.html'",
