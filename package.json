@@ -24,6 +24,7 @@
         "postcss-syntax": "^0.36.2",
         "prettier": "^3.4.1",
         "sass": "^1.81.0",
+        "sharp": "^0.33.5",
         "stylelint": "^16.10.0",
         "stylelint-config-sass-guidelines": "^12.1.0",
         "stylelint-config-standard-scss": "^13.1.0",
