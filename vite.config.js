@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
-import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
 import { globSync } from "glob";
 import path, { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -59,31 +58,25 @@ export default defineConfig({
             output: {
                 entryFileNames: `assets/js/[name].js`,
                 chunkFileNames: `assets/js/[name].js`,
-                assetFileNames: (assetInfo) => {
-                    if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
+                assetFileNames: (assetsInfo) => {
+                    if (/\.(gif|jpeg|jpg|png|svg|webp|avif)$/.test(assetsInfo.name)) {
                         return 'assets/img/[name].[ext]';
+                    } else if (assetsInfo.name === "style.css") {
+                        return "assets/css/[name].[ext]";
+                    } else {
+                        return "assets/[name].[ext]";
                     }
-                    if (/\.css$/.test(assetInfo.name)) {
-                        return 'assets/css/[name].[ext]';
-                    }
-                        return 'assets/[name].[ext]';
                 },
             },
         }
     },
     plugins: [
         ViteEjsPlugin(),
-        sassGlobImports(),
-        VitePluginWebpAndPath({
-            targetDir: './public/',
-            imgExtensions: 'jpg,png',
-            textExtensions: 'html,css',
-            quality: 80,
-            enableLogs: true
-        })
+        sassGlobImports()
     ],
     server: {
         port: 3000,
         host: true
     }
+
 })

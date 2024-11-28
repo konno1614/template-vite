@@ -9,7 +9,7 @@
         <!-- icon -->
         <link rel="icon" href="./assets/img/common/favicon.ico" sizes="32x32" type="image/vnd.microsoft.icon" />
         <link rel="icon" href="./assets/img/common/favicon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="./assets/img/common/apple-touch-icon.webp" />
+        <link rel="apple-touch-icon" href="./assets/img/common/apple-touch-icon.png" />
         <link rel="manifest" href="./assets/json/manifest.webmanifest" crossorigin="use-credentials" />
         <!-- ogp -->
         <meta property="og:site_name" content="Top | Sample Sites" />
@@ -17,11 +17,11 @@
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Top | Sample Sites" />
         <meta property="og:description" content="Description Text" />
-        <meta property="og:image" content="/assets/img/common/ogp.webp" />
+        <meta property="og:image" content="/assets/img/common/ogp.png" />
         <meta property="og:locale" content="ja_JP" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:description" content="Description Text" />
-        <meta name="twitter:image:src" content="/assets/img/common/ogp.webp" />
+        <meta name="twitter:image:src" content="/assets/img/common/ogp.png" />
         <!-- Font -->
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -89,11 +89,19 @@
                 </p>
                 <div class="p-index__jpg">
                     <h3>jpg image</h3>
-                    <img src="./assets/img/index/jpg-image.webp" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+                    <p>avif対応</p>
+                    <picture>
+                        <source srcset="./assets/img/index/jpg-image.avif" type="image/avif" width="300" height="255" alt="image" />
+                        <img src="./assets/img/index/jpg-image.jpg" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                    </picture>
                 </div>
                 <div class="p-index__png">
                     <h3>png image</h3>
-                    <img src="./assets/img/index/png-image.webp" width="300" height="255" alt="image" fetchpriority="high" loading="lazy" decoding="async" />
+                    <p>webp対応</p>
+                    <picture>
+                        <source srcset="./assets/img/index/png-image.webp" type="image/webp" width="300" height="255" alt="image" />
+                        <img src="./assets/img/index/png-image.png" width="300" height="255" alt="image" fetchpriority="high" decoding="async" />
+                    </picture>
                 </div>
             </div>
         </main>
