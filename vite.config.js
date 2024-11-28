@@ -1,7 +1,6 @@
 import { defineConfig } from "vite";
 import sassGlobImports from 'vite-plugin-sass-glob-import';
 import { ViteEjsPlugin } from "vite-plugin-ejs";
-import VitePluginWebpAndPath from 'vite-plugin-webp-and-path';
 import { globSync } from "glob";
 import path, { resolve } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -73,14 +72,7 @@ export default defineConfig({
     },
     plugins: [
         ViteEjsPlugin(),
-        sassGlobImports(),
-        VitePluginWebpAndPath({
-            targetDir: './public/',
-            imgExtensions: 'jpg,png',
-            textExtensions: 'html,css',
-            quality: 80,
-            enableLogs: true
-        })
+        sassGlobImports()
     ],
     server: {
         port: 3000,

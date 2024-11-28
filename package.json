@@ -13,30 +13,28 @@
         "lint:style": "stylelint src/**/*.{css,scss}"
     },
     "devDependencies": {
-        "@markuplint/ejs-parser": "^4.6.12",
-        "@markuplint/mustache-parser": "^4.6.12",
+        "@markuplint/ejs-parser": "^4.6.13",
+        "@markuplint/mustache-parser": "^4.6.13",
         "autoprefixer": "^10.4.20",
         "css-declaration-sorter": "^7.2.0",
         "eslint-config-prettier": "^9.1.0",
-        "markuplint": "^4.11.2",
+        "markuplint": "^4.11.3",
         "postcss-html": "^1.7.0",
         "postcss-sort-media-queries": "^5.2.0",
         "postcss-syntax": "^0.36.2",
-        "prettier": "^3.3.3",
-        "sass": "^1.80.6",
+        "prettier": "^3.4.1",
+        "sass": "^1.81.0",
         "stylelint": "^16.10.0",
         "stylelint-config-sass-guidelines": "^12.1.0",
         "stylelint-config-standard-scss": "^13.1.0",
-        "stylelint-scss": "^6.8.1",
+        "stylelint-scss": "^6.10.0",
         "vite": "^5.4.10",
-        "vite-plugin-browser-sync": "^3.0.4",
         "vite-plugin-ejs": "^1.7.0",
         "vite-plugin-sass-glob-import": "^4.0.0"
     },
     "dependencies": {
         "glob": "^11.0.0",
-        "gsap": "^3.12.5",
-        "vite-plugin-webp-and-path": "^0.1.4"
+        "gsap": "^3.12.5"
     },
     "browserslist": [
         "last 2 version",
@@ -44,9 +42,6 @@
         "iOS >= 8.1",
         "Android >= 4.4"
     ],
-    "volta": {
-        "node": "22.9.0"
-    },
     "engines": {
         "node": "22.9.0"
     }
