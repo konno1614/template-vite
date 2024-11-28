@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", function () {
-    // smooth-scroll
+    // smooth scroll
     function setupSmoothScroll() {
         const links = document.querySelectorAll('a[href^="#"]');
         links.forEach(link => {
@@ -14,7 +14,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // page-top
+    // page top
     function setupPageTopLinks() {
         const pageTopLinks = document.querySelectorAll('.js-page-top');
         pageTopLinks.forEach(link => {
