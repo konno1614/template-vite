@@ -58,14 +58,14 @@ export default defineConfig({
             output: {
                 entryFileNames: `assets/js/[name].js`,
                 chunkFileNames: `assets/js/[name].js`,
-                assetFileNames: (assetInfo) => {
-                    if (/\.( gif|jpeg|jpg|png|svg|webp| )$/.test(assetInfo.name)) {
+                assetFileNames: (assetsInfo) => {
+                    if (/\.(gif|jpeg|jpg|png|svg|webp|avif)$/.test(assetsInfo.name)) {
                         return 'assets/img/[name].[ext]';
+                    } else if (assetsInfo.name === "style.css") {
+                        return "assets/css/[name].[ext]";
+                    } else {
+                        return "assets/[name].[ext]";
                     }
-                    if (/\.css$/.test(assetInfo.name)) {
-                        return 'assets/css/[name].[ext]';
-                    }
-                        return 'assets/[name].[ext]';
                 },
             },
         }
@@ -78,4 +78,5 @@ export default defineConfig({
         port: 3000,
         host: true
     }
+
 })
