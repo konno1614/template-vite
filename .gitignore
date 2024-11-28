@@ -24,5 +24,6 @@ dist-ssr
 *.sw?
 
 # add
-# public
 !/src/public
+/src/public/assets/img/**/*.webp
+/src/public/assets/img/**/*.avif
